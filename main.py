@@ -1,5 +1,61 @@
 import random
 
+hangman_stages = ['''
+  ============''', '''
+    |            
+    |            
+    |           
+    |           
+  ============''', '''
+    +-------------
+    |            
+    |            
+    |           
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            
+    |           
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |           
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |            |
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |           /|
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |           /|\\
+    |           
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |           /|\\
+    |           / 
+  ============''', '''
+    +-------------
+    |            |
+    |            @
+    |           /|\\
+    |           / \\
+  ============''']
+
 word_list = ["aardvark", "baboon", "camel"]
 blank_letters = ""
 
@@ -18,6 +74,7 @@ final_blank_letters = ""
 
 
 def hangman():
+    used_life = 0
     while "_" in blank_list:
         # Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
         guess = input("Guess a letter: ").lower()
@@ -27,8 +84,18 @@ def hangman():
             for i in range(len(chosen_word)):
                 if chosen_word[i] == guess:
                     blank_list[i] = guess
-                    print(final_blank_letters.join(blank_list), "\n")
-    print("YOU WON 🏆🏆", final_blank_letters)
+            print(final_blank_letters.join(blank_list), "\n")
+        else:
+            # Track the count of lives used
+            if used_life < 9:
+                print(hangman_stages[used_life])
+                used_life += 1
+            else:
+                print(hangman_stages[used_life])
+                print(f"YOU LOSE 🤦‍. The hidden word was '{chosen_word}'️. \n")
+
+    print("YOU WON 🏆🏆!")
 
 
 hangman()
+
