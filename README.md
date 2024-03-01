@@ -19,4 +19,7 @@ Do not forgot the ```3``` after ```python```.
 
 ## 📺 Demo
 <p align="center">
-![](gif_hangman.gif)
+<img src="https://github.com/Atalaa/hangman/blob/main/gif_hangman.gif?raw=true" />
+
+## Author
+[Aata-allah Rchidi](https://www.linkedin.com/in/aata-allah-rchidi/)
