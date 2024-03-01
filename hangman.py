@@ -31,10 +31,10 @@ def hangman():
             os.system("clear")
 
             if guess in blank_letters:
-                print(f'You\'ve already typed "{guess}".')
+                print(f"You\'ve already typed '{guess}'.")
 
             if guess in wrong_letter:
-                print(f'You\'ve already tried the letter "{guess}"')
+                print(f"You\'ve already tried the letter '{guess}'.")
 
             # Check if guess is one of the letters in the chosen_word.
             for i in range(len(chosen_word)):
