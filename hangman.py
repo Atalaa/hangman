@@ -4,12 +4,10 @@ import sys
 import words
 import os
 
-# print(draw.logo, "\n")
+print(draw.logo, "\n")
 
 # Randomly choose a word from the word_list
 chosen_word = random.choice(words.word_list)
-print("chosen word is:", chosen_word)
-
 
 # Generate blank letters for chosen_word
 blank_letters = []
