@@ -15,7 +15,11 @@ Running the script is really simple! Just open a terminal in the folder where yo
 ```sh
 python3 hangman.py
 ```
-Do not forgot the ```3``` after ```python```.
+or
+
+```sh
+python hangman.py
+```
 
 ## 📺 Demo
 <p align="center">
