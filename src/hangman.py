@@ -3,6 +3,15 @@ import random
 import sys
 import words
 import os
+import platform
+
+# function to clear terminal screen based on OS
+def clear_screen():
+    os_name = platform.system()
+    if os_name != 'Windows':
+        os.system("clear")
+    else:
+        os.system("cls")
 
 print(draw.logo, "\n")
 
@@ -26,7 +35,7 @@ def hangman():
             print(draw.hangman_stages[used_lives])
             print("".join(blank_letters))
             guess = input("Guess a letter: ").lower()
-            os.system("clear")
+            clear_screen()
 
             if guess in blank_letters:
                 print(f"You\'ve already typed '{guess}'.")
