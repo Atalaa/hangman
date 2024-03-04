@@ -5,6 +5,7 @@ import words
 import os
 import platform
 
+
 # function to clear terminal screen based on OS
 def clear_screen():
     os_name = platform.system()
@@ -12,6 +13,7 @@ def clear_screen():
         os.system("clear")
     else:
         os.system("cls")
+
 
 print(draw.logo, "\n")
 
